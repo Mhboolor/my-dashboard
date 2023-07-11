@@ -1,7 +1,7 @@
 import React from "react";
 import { MdMenu, MdDarkMode, MdSunny, MdArrowDropDown } from "react-icons/md";
 
-function Header() {
+function Header({changeMenuStatus}) {
   return (
     <div className="flex items-center justify-between p-4 w-full md:px-10 bg-dark shadow-md shadow-white">
       <div className="flex items-center gap-8">
@@ -12,7 +12,7 @@ function Header() {
         />
         <img src="./images/logo-sm.png" alt="" className="md:hidden h-6 w-6" />
         <div className="flex items-center justify-center md:hidden text-2xl text-white">
-          <button className="bg-transparent">
+          <button className="bg-transparent" onClick={changeMenuStatus}>
             <MdMenu />
           </button>
         </div>
