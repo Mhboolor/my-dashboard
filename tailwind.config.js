@@ -27,6 +27,9 @@ module.exports = {
           6 : '#323a46',
         }
       },
+      borderColor : {
+        'circle-chart' : 'rgba(241, 85, 108, 0.85)',
+      }
     },
   },
   plugins: [],

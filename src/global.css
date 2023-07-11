@@ -15,3 +15,6 @@
 .active{
     color: #00acc1;
 }
+.recharts-responsive-container{
+    min-width: 100%!important;
+}
