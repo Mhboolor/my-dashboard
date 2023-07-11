@@ -6,12 +6,12 @@ import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
-    <div>
+    <div className="bg-light">
       <header>
         <Header/>
       </header>
-      <div className="flex">
-        <aside className="w-full max-w-[240px] shadow-sm bg-white">
+      <div className="flex gap-5">
+        <aside className="w-full h-screen overflow-auto max-w-[230px] shadow-sm bg-white">
           <Sidebar/>
         </aside>
         <main>
