@@ -26,6 +26,7 @@ module.exports = {
         'warning' : 'rgb(247, 184, 75)',
         'success' : 'rgb(26, 188, 156)',
         'error' : 'rgb(241, 85, 108)',
+        'gold' : 'rgb(247, 184, 75)',
         'gray' : {
           1 : 'rgba(255, 255, 255, 0.6)',
           2 : '#98a6ad',
