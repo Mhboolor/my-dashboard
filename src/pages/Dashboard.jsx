@@ -6,7 +6,7 @@ import RevenueHistory from "../components/dahboard/RevenueHistory";
 
 function Dashboard() {
   return (
-    <div className="p-4 flex flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <div className="flex items-center font-medium text-xl text-gray-6 mt-4">
         <p>داشبورد</p>
       </div>
