@@ -21,7 +21,7 @@ function ChartBox() {
     },
     {
       name: "Feb",
-      revenue: 2400,
+      revenue: 600,
     },
     {
       name: "Mar",
@@ -33,7 +33,7 @@ function ChartBox() {
     },
     {
       name: "May",
-      revenue: 2000,
+      revenue: 900,
     },
     {
       name: "Jun",
@@ -57,7 +57,7 @@ function ChartBox() {
     },
     {
       name: "Nov",
-      revenue: 2100,
+      revenue: 100,
     },
     {
       name: "Dec",

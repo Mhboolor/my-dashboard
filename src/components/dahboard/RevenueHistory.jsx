@@ -34,7 +34,7 @@ function RevenueHistory() {
                 <p>$5848.68</p>
               </td>
               <td className="p-3">
-                <p>پیش رو</p>
+                <span className="bg-warning text-warning rounded-sm p-1 text-xs">پیش رو</span>
               </td>
               <td className="p-3">
                 <button className="text-lg flex items-center justify-center text-black bg-light rounded-sm px-2 py-1">
