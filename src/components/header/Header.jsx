@@ -11,7 +11,7 @@ function Header({changeMenuStatus}) {
           className="hidden md:flex w-[100px] h-5"
         />
         <img src="./images/logo-sm.png" alt="" className="md:hidden h-6 w-6" />
-        <div className="flex items-center justify-center md:hidden text-2xl text-white">
+        <div className="flex items-center justify-center lg:hidden text-2xl text-white">
           <button className="bg-transparent" onClick={changeMenuStatus}>
             <MdMenu />
           </button>

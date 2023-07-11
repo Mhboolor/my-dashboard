@@ -18,7 +18,7 @@ function App() {
       </header>
       <div className="flex gap-5 relative">
         <aside className={`${showMenu ? 'w-full' : 'w-0'} absolute right-0 top-0 ease-in-out duration-100 z-20 lg:relative lg:w-full h-screen overflow-auto max-w-[230px] shadow-sm bg-white`}>
-          <Sidebar/>lg
+          <Sidebar/>
         </aside>
         <main className="flex-1 w-full">
           <Outlet/>
