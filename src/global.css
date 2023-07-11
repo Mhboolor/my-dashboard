@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "iransans";
+    src: url("../public/fonts/IRANSans.ttf") format("ttf");
+}
+
+@layer base{
+    html{
+        font-family: "iransans";
+    }
+}
