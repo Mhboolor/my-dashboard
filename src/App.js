@@ -17,7 +17,7 @@ function App() {
         <Header changeMenuStatus={changeMenuStatus}/>
       </header>
       <div className="flex gap-5 relative">
-        <aside className={`${showMenu ? 'w-full' : 'w-0'} absolute right-0 top-0 ease-in-out duration-200 z-20 md:relative md:w-full h-screen overflow-auto max-w-[230px] shadow-sm bg-white`}>
+        <aside className={`${showMenu ? 'w-full' : 'w-0'} absolute right-0 top-0 ease-in-out duration-100 z-20 md:relative md:w-full h-screen overflow-auto max-w-[230px] shadow-sm bg-white`}>
           <Sidebar/>
         </aside>
         <main>
