@@ -8,5 +8,124 @@
       "stock": 59,
       "rate": 50
     }
+  ],
+  "tikets": [
+    {
+      "id": "#9852",
+      "image": "./images/users/user-1.jpg",
+      "name": "Debra J. Wilson",
+      "subject": "Your item has been updated!",
+      "priority": "High",
+      "status": "Open",
+      "date": "01/04/2017",
+      "du-date": "21/05/2017"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "image": "./images/users/user-1.jpg",
+      "name": "پل جی فرند",
+      "phone": "937-330-1634",
+      "email": "pauljfrnd@jourrapide.com",
+      "company": "پل جی فرند",
+      "date": "07/07/2018",
+      "caption": "سلام من جاناتن دیو هستم ، از آن زمان به بعد ، متن ساختگی استاندارد صنعت بوده است دهه 1500 ، هنگامی که یک چاپگر ناشناخته از نوع خاصی استفاده کرد.",
+      "job": "مدیر شعبه",
+      "birthday": "March 23, 1984 (34 Years)",
+      "data": "April 22, 2016",
+      "update": "Dec 13, 2017"
+    }
+  ],
+  "best-users": [
+    {
+      "id": "1",
+      "image": "./images/users/user-2.jpg",
+      "name": "هادی",
+      "data": "عضو از 2017",
+      "property": "BTC",
+      "order": "0.00816117 BTC",
+      "currency": "0.00097036 BTC"
+    },
+    {
+      "id": "2",
+      "image": "./images/users/user-3.jpg",
+      "name": "سعید نجمی",
+      "data": "عضو از 2017",
+      "property": "ETH",
+      "order": "3.16117008 ETH",
+      "currency": "1.70360009 ETH"
+    },
+    {
+      "id": "3",
+      "image": "./images/users/user-4.jpg",
+      "name": "امیر دانشیار",
+      "data": "عضو از 2017",
+      "property": "EUR",
+      "order": "25.08 EUR",
+      "currency": "12.58 EUR"
+    },
+    {
+      "id": "4",
+      "image": "./images/users/user-5.jpg",
+      "name": "مرتضی قاسم خانی    ",
+      "data": "عضو از 2017",
+      "property": "CNY",
+      "order": "82.00 CNY",
+      "currency": "30.83 CNY"
+    },
+    {
+      "id": "5",
+      "image": "./images/users/user-6.jpg",
+      "name": "میثم جوادی    ",
+      "data": "عضو از 2017",
+      "property": "BTC",
+      "order": "2.00816117 BTC",
+      "currency": "1.00097036 BTC"
+    }
+  ],
+  "revenue-history": [
+    {
+      "id": "1",
+      "name": "تم مارکت",
+      "date": "Oct 15, 2018",
+      "pay": "$5848.68",
+      "status": "پیش رو"
+    },
+    {
+      "id": "2",
+      "name": "شکربن",
+      "date": "Oct 15, 2018",
+      "pay": "$1247.25",
+      "status": "پرداخت شده"
+    },
+    {
+      "id": "3",
+      "name": "شیرهولدینگ",
+      "date": "Oct 15, 2018",
+      "pay": "$815.89",
+      "status": "پرداخت شده"
+    },
+    {
+      "id": "4",
+      "name": "امواتو",
+      "date": "Oct 15, 2018",
+      "pay": "$248.75",
+      "status": "معوق"
+    },
+    {
+      "id": "5",
+      "name": "ویسپهر",
+      "date": "Oct 15, 2018",
+      "pay": "$978.21",
+      "status": "پیش رو"
+    },
+    {
+      "id": "6",
+      "name": "فولاد سونگون",
+      "date": "Oct 15, 2018",
+      "pay": "$358.10",
+      "status": "پرداخت شده"
+    }
   ]
 }

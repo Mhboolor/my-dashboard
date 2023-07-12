@@ -5,9 +5,9 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => "/products",
+      query: () => "/",
     }),
   }),
 });
 
-export const { useGetProductsQuery } = apiSlice;
+export const {  } = apiSlice;
