@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "./images/products/product-1.png",
+      "title": "شلوار",
+      "price": "159000",
+      "stock": 59,
+      "rate": 50
+    }
+  ]
+}

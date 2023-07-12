@@ -3,10 +3,14 @@ import { createRoot } from 'react-dom/client';
 import './global.css';
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/routes";
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>
+  <Provider store={store}>
+    <StrictMode>
+      <RouterProvider router={router}/>
+    </StrictMode>
+  </Provider>
 );
