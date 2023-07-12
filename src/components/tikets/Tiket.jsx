@@ -5,7 +5,7 @@ function Tiket() {
   return (
     <tr className="hover:bg-light">
       <td className="p-3">#9852</td>
-      <td className="flex items-center gap-2 p-3">
+      <td className="flex items-center gap-2 px-3 py-5">
         <img
           src="./images/users/user-1.jpg"
           alt="user"

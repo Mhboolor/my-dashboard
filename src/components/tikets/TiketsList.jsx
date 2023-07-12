@@ -14,7 +14,7 @@ function TiketsList() {
         <SearchBox/>
         <div className='w-full overflow-x-scroll md:overflow-auto'>
             <table className='text-sm text-gray-4 text-justify w-[900px] md:w-full'>
-                <thead>
+                <thead className='border-b'>
                     <tr>
                         <th className='p-3'>شناسه</th>
                         <th className='p-3'>ارسال شده توسط</th>
