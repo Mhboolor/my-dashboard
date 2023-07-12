@@ -25,7 +25,7 @@ function Header({changeMenuStatus}) {
             className="rounded-full w-8 h-8"
           />
           <button className="flex items-center text-sm font-meduim">
-            هانیه <MdArrowDropDown />
+            زهرا <MdArrowDropDown />
           </button>
         </div>
         <div className="text-2xl">

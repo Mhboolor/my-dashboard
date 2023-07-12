@@ -14,7 +14,7 @@ function UserInfo() {
           />
         </div>
         <div className="md:text-center">
-          <p className="text-gray-5 text-base font-semibold">حنا</p>
+          <p className="text-gray-5 text-base font-semibold">زهرا</p>
           <p>مدیر شعبه</p>
           <p className="flex itmes-center gap-2 md:justify-center">
             <MdOutlineHomeWork />
