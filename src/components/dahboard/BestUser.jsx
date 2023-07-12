@@ -1,12 +1,12 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 
-function BestUser() {
+function BestUser({id , image , name , date , property , order , currency , deleteUser}) {
   return (
     <tr className="text-gray-2 text-sm ease-in-out duration-100 hover:bg-table-light">
       <td className="p-3">
         <img
-          src="./images/users/user-2.jpg"
+          src={image}
           alt=""
           className="rounded-full w-9 h-9"
           width={36}
@@ -14,20 +14,20 @@ function BestUser() {
         />
       </td>
       <td className="p-3">
-        <p className="text-gray-5">هادی</p>
-        <p className="text-xs">عضو از 2017</p>
+        <p className="text-gray-5">{name}</p>
+        <p className="text-xs">{date}</p>
       </td>
       <td className="p-3">
-        <p>BTC</p>
+        <p>{property}</p>
       </td>
       <td className="p-3">
-        <p>0.00816117 BTC</p>
+        <p>{order}</p>
       </td>
       <td className="p-3">
-        <p>0.00097036 BTC</p>
+        <p>{currency}</p>
       </td>
       <td className="p-3">
-        <button className="text-lg flex items-center justify-center text-white bg-red rounded-sm px-2 py-1">
+        <button className="text-lg flex items-center justify-center text-white bg-red rounded-sm px-2 py-1" onClick={() => deleteUser(id)}>
           <MdDelete />
         </button>
       </td>
