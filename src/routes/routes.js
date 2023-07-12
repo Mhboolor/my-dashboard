@@ -4,7 +4,6 @@ import NotFound from "../pages/NotFound";
 import Products from "../pages/Products";
 import Tikets from "../pages/Tikets";
 import Users from "../pages/Users";
-import Sellers from "../pages/Sellers";
 import App from "../App";
 
 export const router = createBrowserRouter([
@@ -12,7 +11,6 @@ export const router = createBrowserRouter([
         {path : '/' , element : <Dashboard/>},
         {path : '/products' , element : <Products/>},
         {path : '/users' , element : <Users/>},
-        {path : '/sellers' , element : <Sellers/>},
         {path : '/tikets' , element : <Tikets/>},
     ]},
 ])

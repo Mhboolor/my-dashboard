@@ -5,7 +5,7 @@ import {
   MdProductionQuantityLimits,
   MdOutlineSpeakerNotes,
 } from "react-icons/md";
-import { FaUsers, FaUsersGear } from "react-icons/fa6";
+import { FaUsers } from "react-icons/fa6";
 
 function Sidebar() {
   return (
@@ -42,15 +42,6 @@ function Sidebar() {
         >
           <FaUsers />
           کاربران
-        </NavLink>
-        <NavLink
-          to={"/sellers"}
-          className={
-            "w-full hover:text-[#00acc1] py-3 px-5 flex items-center gap-2 ease-in-out duration-200"
-          }
-        >
-          <FaUsersGear />
-          فروشندگان
         </NavLink>
         <p className="text-xs">تیکت ها</p>
 
