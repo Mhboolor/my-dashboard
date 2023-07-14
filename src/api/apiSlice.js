@@ -4,16 +4,17 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
   endpoints: (builder) => ({
-    getBestUsers: builder.query({
-      query: () => "/best-users",
+    getAllProducts : builder.query({
+      query : () => "/products",
     }),
-    deleteBestUser : builder.mutation({
-      query : bestUserId => ({
-        url : `/best-users/${bestUserId}`,
-        method: 'DELETE',
+    addProduct : builder.mutation({
+      query : newProduct => ({
+        url : "/products",
+        method : "POST",
+        body : newProduct
       })
     })
   }),
 });
 
-export const { useGetBestUsersQuery , useDeleteBestUserMutation } = apiSlice;
+export const { useGetAllProductsQuery , useAddProductMutation } = apiSlice;

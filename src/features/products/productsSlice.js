@@ -1,8 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice , createEntityAdapter } from "@reduxjs/toolkit";
+
+const productsAdapter = createEntityAdapter({}) 
 
 const productsSlice = createSlice({
     name : "products",
-    initialState : [],
+    initialState : productsAdapter.getInitialState(),
     reducers : {}
 })
 
