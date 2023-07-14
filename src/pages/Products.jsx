@@ -4,6 +4,7 @@ import Product from "../components/products/Product";
 import HeaderPages from "../components/HeaderPages";
 import { useGetAllProductsQuery } from "../api/apiSlice";
 import Loading from "../components/Loading";
+import AddProduct from "../components/products/AddProduct";
 
 function Products() {
   const { data: products, isLoading, isError } = useGetAllProductsQuery();
@@ -25,6 +26,7 @@ function Products() {
           ))}
         </div>
       ) : null}
+      <AddProduct/>
     </div>
   );
 }
