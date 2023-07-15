@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {MdAddCircleOutline} from "react-icons/md"
-
 import SearchBox from './SearchBox'
 import Tiket from './Tiket'
+import { useGetTiketsQuery } from '../../api/apiSlice'
+import Loading from "../Loading"
 
 function TiketsList() {
+
+    const [showAdd , setShowAdd] = useState(true)
+
+    const {data : tikets , isLoading , isError , isSuccess} = useGetTiketsQuery() 
+
+
   return (
     <div className='bg-white shadow-sm rounded-sm p-6 flex flex-col gap-5'>
         <div className='flex items-center justify-between'>
@@ -27,7 +34,17 @@ function TiketsList() {
                     </tr>
                 </thead>
                 <tbody className=' divide-y'>
-                    <Tiket/>
+                    {
+                        isError ? (
+                            <p>خطا در هنگام دریافت اطلاعات از سرور</p>
+                        ) : isLoading ? (
+                            <Loading/>
+                        ) : isSuccess ? (
+                            tikets.map(tiket => (
+                                <Tiket {...tiket}/>
+                            ))
+                        ) : null
+                    }
                 </tbody>
             </table>
         </div>

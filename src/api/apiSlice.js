@@ -90,6 +90,10 @@ export const apiSlice = createApi({
     }),
 
     // Tikets
+    getTikets : builder.query({
+      query : () => '/tikets',
+      providesTags: ["TIKETS"]
+    }),
     addTikets : builder.mutation({
       query : (newTiket) => ({
         url : "/tikets",
@@ -114,5 +118,7 @@ export const {
   useGetAllUsersQuery,
   useGetUserQuery,
   useAddUserMutation,
-  useDeleteUserMutation
+  useDeleteUserMutation,
+  useGetTiketsQuery,
+  useAddTiketsMutation
 } = apiSlice;
