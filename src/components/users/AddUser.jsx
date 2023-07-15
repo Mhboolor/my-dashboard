@@ -20,7 +20,7 @@ function AddUser({changeShow}) {
         if(name && phone && email && company && caption && job && image && birthday){
             await addNewUser({
                 id : nanoid(),
-                date : Date.now(),
+                date : new Date().toLocaleDateString(),
                 name,
                 phone,
                 email,

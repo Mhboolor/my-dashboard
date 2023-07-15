@@ -12,7 +12,6 @@ export const apiSlice = createApi({
     }),
     getProduct: builder.query({
       query: (productId) => `/products/${productId}`,
-      providesTags: ["PRODUCTS"],
     }),
     addProduct: builder.mutation({
       query: (newProduct) => ({
@@ -71,7 +70,6 @@ export const apiSlice = createApi({
     }),
     getUser: builder.query({
       query: (userId) => `/users/${userId}`,
-      providesTags: ["USERS"],
     }),
     addUser: builder.mutation({
       query: (newUser) => ({

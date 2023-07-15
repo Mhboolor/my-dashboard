@@ -7,21 +7,17 @@ import Loading from "../components/Loading";
 import AddProduct from "../components/products/AddProduct";
 
 function Products() {
-  let [sort, setSort] = useState("");
-  const { data : products, isLoading, isError } = useGetAllProductsQuery();
+  const { data: products, isLoading, isError } = useGetAllProductsQuery();
   const [showAdd, setShowAdd] = useState(false);
 
   const showAddModal = () => {
     setShowAdd((prev) => !prev);
   };
-  const changeSorted = (value) => {
-    setSort(sort = value)
-  }
 
   return (
     <div className="flex flex-col gap-5">
       <HeaderPages title={"محصولات"} address={"محصولات"} />
-      <SearchBox showAddModal={showAddModal} changeSorted={changeSorted}/>
+      <SearchBox showAddModal={showAddModal} />
       {isError ? (
         <p className="text-2xl text-center">
           مشکل در هنگام دریافت محصولات از سرور

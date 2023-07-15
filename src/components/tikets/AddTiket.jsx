@@ -16,7 +16,8 @@ function AddTiket({changeShow}) {
         if (name && subject && priority && status && image) {
             await newTiket({
                 id : nanoid(),
-                ex : Date.now().toString,
+                date : new Date().toLocaleDateString(),
+                ex : new Date().toLocaleDateString(),
                 name ,
                 subject ,
                 priority ,
