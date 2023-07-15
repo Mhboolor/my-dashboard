@@ -8,10 +8,14 @@ export const apiSlice = createApi({
     // Products Api
     getAllProducts: builder.query({
       query: () => "/products",
-      providesTags: ["PRODUCTS"],
+      providesTags: (result = [], error, arg) => [
+        "PRODUCTS",
+        ...result.map(({ id }) => ({ type: "PRODUCTS", id })),
+      ],
     }),
     getProduct: builder.query({
       query: (productId) => `/products/${productId}`,
+      providesTags: (result, error, arg) => [{ type: "PRODUCTS", id: arg }],
     }),
     addProduct: builder.mutation({
       query: (newProduct) => ({
@@ -34,7 +38,9 @@ export const apiSlice = createApi({
         method: "PUT",
         body: editedProduct,
       }),
-      invalidatesTags: ["PRODUCTS"],
+      invalidatesTags: (result, error, arg) => [
+        { type: "PRODUCTS", id: arg.id },
+      ],
     }),
 
     // Dashboard Best Users Api
@@ -66,10 +72,14 @@ export const apiSlice = createApi({
     // Users Api
     getAllUsers: builder.query({
       query: () => "/users",
-      providesTags: ["USERS"],
+      providesTags: (result = [], error, arg) => [
+        "USERS",
+        ...result.map(({ id }) => ({ type: "USERS", id })),
+      ],
     }),
     getUser: builder.query({
       query: (userId) => `/users/${userId}`,
+      providesTags: (result, error, arg) => [{ type: "USERS", id: arg }],
     }),
     addUser: builder.mutation({
       query: (newUser) => ({
@@ -90,7 +100,10 @@ export const apiSlice = createApi({
     // Tikets
     getTikets: builder.query({
       query: () => "/tikets",
-      providesTags: ["TIKETS"],
+      providesTags: (result = [], error, arg) => [
+        "TIKETS",
+        ...result.map(({ id }) => ({ type: "TIKETS", id })),
+      ],
     }),
     addTikets: builder.mutation({
       query: (newTiket) => ({
@@ -100,13 +113,13 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ["TIKETS"],
     }),
-    deleteTiket : builder.mutation({
-      query : (tiketId) => ({
-        url : `/tikets/${tiketId}`,
-        method : "DELETE"
+    deleteTiket: builder.mutation({
+      query: (tiketId) => ({
+        url: `/tikets/${tiketId}`,
+        method: "DELETE",
       }),
       invalidatesTags: ["TIKETS"],
-    })
+    }),
   }),
 });
 
@@ -126,5 +139,5 @@ export const {
   useDeleteUserMutation,
   useGetTiketsQuery,
   useAddTiketsMutation,
-  useDeleteTiketMutation
+  useDeleteTiketMutation,
 } = apiSlice;
