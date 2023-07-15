@@ -1,8 +1,12 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 import User from "./User";
+import { useGetAllUsersQuery } from "../../api/apiSlice";
+import Loading from "../Loading";
 
-function UsersList() {
+function UsersList({ changeId }) {
+  const { data: users, isLoading, isError, isSuccess } = useGetAllUsersQuery();
+
   return (
     <div className="p-6 bg-white rounded-sm shadow-sm flex flex-col gap-5 flex-1 w-full">
       <SearchBox />
@@ -19,7 +23,15 @@ function UsersList() {
             </tr>
           </thead>
           <tbody className=" divide-y">
-            <User />
+            {isError ? (
+              <p>خطا در هنگام دریافت اطلاعات از سرور</p>
+            ) : isLoading ? (
+              <Loading />
+            ) : isSuccess ? (
+              users.map(user => (
+                <User {...user} key={user.id} changeId={changeId}/>
+              ))
+            ) : null}
           </tbody>
         </table>
       </div>

@@ -7,19 +7,21 @@ import Loading from "../components/Loading";
 import AddProduct from "../components/products/AddProduct";
 
 function Products() {
-
+  let [sort, setSort] = useState("");
+  const { data : products, isLoading, isError } = useGetAllProductsQuery();
   const [showAdd, setShowAdd] = useState(false);
 
   const showAddModal = () => {
     setShowAdd((prev) => !prev);
   };
-
-  const { data: products, isLoading, isError } = useGetAllProductsQuery();
+  const changeSorted = (value) => {
+    setSort(sort = value)
+  }
 
   return (
     <div className="flex flex-col gap-5">
       <HeaderPages title={"محصولات"} address={"محصولات"} />
-      <SearchBox showAddModal={showAddModal} />
+      <SearchBox showAddModal={showAddModal} changeSorted={changeSorted}/>
       {isError ? (
         <p className="text-2xl text-center">
           مشکل در هنگام دریافت محصولات از سرور
@@ -29,11 +31,11 @@ function Products() {
       ) : products ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {products.map((product) => (
-            <Product {...product} key={product.id}/>
+            <Product {...product} key={product.id} />
           ))}
         </div>
       ) : null}
-      {showAdd && <AddProduct showAddModal={showAddModal}/>}
+      {showAdd && <AddProduct showAddModal={showAddModal} />}
     </div>
   );
 }

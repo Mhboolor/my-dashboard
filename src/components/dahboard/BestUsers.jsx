@@ -38,7 +38,7 @@ function BestUsers() {
                 <Loading/>
               ) : isSuccess ? (
                 users.map(user => (
-                  <BestUser {...user}/>
+                  <BestUser {...user} key={user.id}/>
                 ))
               ) : null
             }

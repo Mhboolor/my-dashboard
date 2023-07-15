@@ -1,8 +1,17 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { MdEdit } from "react-icons/md";
+import { useGetRevenueHistoryQuery } from "../../api/apiSlice";
+import Revenue from "./Revenue";
+import Loading from "../Loading";
 
 function RevenueHistory() {
+  const {
+    data: revenues,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useGetRevenueHistoryQuery();
+
   return (
     <div className="bg-white shadow-sm rounded-sm p-6 flex flex-col gap-5 flex-1 w-full h-full overflow-hidden">
       <div className="flex items-center justify-between">
@@ -23,25 +32,13 @@ function RevenueHistory() {
             </tr>
           </thead>
           <tbody>
-            <tr className="text-gray-2 text-sm ease-in-out duration-100 hover:bg-table-light">
-              <td className="p-3">
-                <p className="text-gray-5">تم مارکت</p>
-              </td>
-              <td className="p-3">
-                <p>Oct 15, 2018</p>
-              </td>
-              <td className="p-3">
-                <p>$5848.68</p>
-              </td>
-              <td className="p-3">
-                <span className="bg-warning text-warning rounded-sm p-1 text-xs">پیش رو</span>
-              </td>
-              <td className="p-3">
-                <button className="text-lg flex items-center justify-center text-black bg-light rounded-sm px-2 py-1">
-                  <MdEdit />
-                </button>
-              </td>
-            </tr>
+            {isError ? (
+              <p>خطا در هنگام دریافت اطلاعات از سرور</p>
+            ) : isLoading ? (
+              <Loading />
+            ) : isSuccess ? (
+              revenues.map((revenue) => <Revenue {...revenue} key={revenue.id} />)
+            ) : null}
           </tbody>
         </table>
       </div>

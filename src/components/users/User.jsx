@@ -1,23 +1,22 @@
 import React from "react";
-import {MdDelete , MdEdit} from "react-icons/md"
+import {MdDelete} from "react-icons/md"
 
-function User() {
+function User({id , image , name , phone , email , company , date , changeId}) {
   return (
-    <tr className="hover:bg-light">
+    <tr className="hover:bg-light" onClick={() => changeId(id)}>
       <td className="flex items-center gap-2 px-3 py-5">
         <img
-          src="./images/users/user-1.jpg"
+          src={image}
           alt="user"
           className="w-6 h-6 rounded-full"
         />
-        <span>پل جی فرند</span>
+        <span>{name}</span>
       </td>
-      <td>937-330-1634</td>
-      <td className="p-3">pauljfrnd@jourrapide.com</td>
-      <td className="p-3">پل جی فرند</td>
-      <td className="p-3">07/07/2018 </td>
+      <td>{phone}</td>
+      <td className="p-3">{email}</td>
+      <td className="p-3">{company}</td>
+      <td className="p-3">{date}</td>
       <td>
-        <button className="mx-1 text-base"><MdEdit/></button>
         <button className="mx-1 text-base"><MdDelete/></button>
       </td>
     </tr>

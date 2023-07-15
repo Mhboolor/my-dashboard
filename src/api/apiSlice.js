@@ -3,60 +3,89 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
-  tagTypes : ["PRODUCTS","BESTUSERS"],
+  tagTypes: ["PRODUCTS", "BESTUSERS", "REVENUE-HISTORY","USERS"],
   endpoints: (builder) => ({
-
     // Products Api
-    getAllProducts : builder.query({
-      query : () => "/products",
-      providesTags : ["PRODUCTS"]
+    getAllProducts: builder.query({
+      query: () => "/products",
+      providesTags: ["PRODUCTS"],
     }),
-    getProduct : builder.query({
-      query : (productId) => `/products/${productId}`,
-      providesTags : ["PRODUCTS"]
+    getProduct: builder.query({
+      query: (productId) => `/products/${productId}`,
+      providesTags: ["PRODUCTS"],
     }),
-    addProduct : builder.mutation({
-      query : newProduct => ({
-        url : "/products",
-        method : "POST",
-        body : newProduct
+    addProduct: builder.mutation({
+      query: (newProduct) => ({
+        url: "/products",
+        method: "POST",
+        body: newProduct,
       }),
-      invalidatesTags : ["PRODUCTS"]
-    }), 
-    deleteProduct : builder.mutation({
-      query : productId => ({
-        url : `/products/${productId}`,
-        method : "DELETE"
-      }),
-      invalidatesTags : ["PRODUCTS"]
+      invalidatesTags: ["PRODUCTS"],
     }),
-    editProduct : builder.mutation({
-      query : (editedProduct) => ({
-        url : `/products/${editedProduct.id}`,
-        method : "PUT",
-        body : editedProduct
+    deleteProduct: builder.mutation({
+      query: (productId) => ({
+        url: `/products/${productId}`,
+        method: "DELETE",
       }),
-      invalidatesTags : ["PRODUCTS"]
+      invalidatesTags: ["PRODUCTS"],
     }),
-
+    editProduct: builder.mutation({
+      query: (editedProduct) => ({
+        url: `/products/${editedProduct.id}`,
+        method: "PUT",
+        body: editedProduct,
+      }),
+      invalidatesTags: ["PRODUCTS"],
+    }),
 
     // Dashboard Best Users Api
-    getBestUsers : builder.query({
-      query : () => "./best-users",
-      providesTags : ["BESTUSERS"]
+    getBestUsers: builder.query({
+      query: () => "./best-users",
+      providesTags: ["BESTUSERS"],
     }),
-    deleteBestUser : builder.mutation({
-      query : (userId) => ({
-        url : `./best-users/${userId}`,
-        method : "DELETE", 
+    deleteBestUser: builder.mutation({
+      query: (userId) => ({
+        url: `/best-users/${userId}`,
+        method: "DELETE",
       }),
-      invalidatesTags : ["BESTUSERS"]
-    })
+      invalidatesTags: ["BESTUSERS"],
+    }),
 
-    
+    // Dashboard Revenue History Api
+    getRevenueHistory: builder.query({
+      query: () => "/revenue-history",
+      providesTags: ["REVENUE-HISTORY"],
+    }),
+    deleteRevenueHistory : builder.mutation({
+      query : (revenueId) => ({
+        url : `/revenue-history/${revenueId}`,
+        method : "DELETE"
+      }), 
+      invalidatesTags: ["REVENUE-HISTORY"],
+    }),
 
-
+    // Users Api
+    getAllUsers : builder.query({
+      query : () => "/users",
+      providesTags: ["USERS"],
+    }),
+    getUser : builder.query({
+      query : (userId) => `/users/${userId}`,
+      providesTags: ["USERS"],
+    }),
   }),
 });
 
-export const { useGetAllProductsQuery , useGetProductQuery ,useAddProductMutation , useDeleteProductMutation , useEditProductMutation , useGetBestUsersQuery , useDeleteBestUserMutation} = apiSlice;
+export const {
+  useGetAllProductsQuery,
+  useGetProductQuery,
+  useAddProductMutation,
+  useDeleteProductMutation,
+  useEditProductMutation,
+  useGetBestUsersQuery,
+  useDeleteBestUserMutation,
+  useGetRevenueHistoryQuery,
+  useDeleteRevenueHistoryMutation,
+  useGetAllUsersQuery,
+  useGetUserQuery
+} = apiSlice;
