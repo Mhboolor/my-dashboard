@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBox() {
+function SearchBox({changeShow}) {
   return (
     <div className="flex flex-col items-start sm:items-center sm:flex-row justify-between gap-4">
       <div>
@@ -11,7 +11,7 @@ function SearchBox() {
         />
       </div>
       <div>
-        <button className="flex items-center gap-2 bg-red text-white rounded-sm px-3 py-2">
+        <button className="flex items-center gap-2 bg-red text-white rounded-sm px-3 py-2" onClick={changeShow}>
           افزودن کاربر
         </button>
       </div>

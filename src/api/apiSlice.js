@@ -73,6 +73,14 @@ export const apiSlice = createApi({
       query : (userId) => `/users/${userId}`,
       providesTags: ["USERS"],
     }),
+    addUser : builder.mutation({
+      query : (newUser) => ({
+        url : "/users",
+        method : "POST",
+        body : newUser
+      }),
+      invalidatesTags: ["USERS"],
+    })
   }),
 });
 
@@ -87,5 +95,6 @@ export const {
   useGetRevenueHistoryQuery,
   useDeleteRevenueHistoryMutation,
   useGetAllUsersQuery,
-  useGetUserQuery
+  useGetUserQuery,
+  useAddUserMutation
 } = apiSlice;
