@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
-  tagTypes: ["PRODUCTS", "BESTUSERS", "REVENUE-HISTORY","USERS","TIKETS"],
+  tagTypes: ["PRODUCTS", "BESTUSERS", "REVENUE-HISTORY", "USERS", "TIKETS"],
   endpoints: (builder) => ({
     // Products Api
     getAllProducts: builder.query({
@@ -56,49 +56,56 @@ export const apiSlice = createApi({
       query: () => "/revenue-history",
       providesTags: ["REVENUE-HISTORY"],
     }),
-    deleteRevenueHistory : builder.mutation({
-      query : (revenueId) => ({
-        url : `/revenue-history/${revenueId}`,
-        method : "DELETE"
-      }), 
+    deleteRevenueHistory: builder.mutation({
+      query: (revenueId) => ({
+        url: `/revenue-history/${revenueId}`,
+        method: "DELETE",
+      }),
       invalidatesTags: ["REVENUE-HISTORY"],
     }),
 
     // Users Api
-    getAllUsers : builder.query({
-      query : () => "/users",
+    getAllUsers: builder.query({
+      query: () => "/users",
       providesTags: ["USERS"],
     }),
-    getUser : builder.query({
-      query : (userId) => `/users/${userId}`,
+    getUser: builder.query({
+      query: (userId) => `/users/${userId}`,
       providesTags: ["USERS"],
     }),
-    addUser : builder.mutation({
-      query : (newUser) => ({
-        url : "/users",
-        method : "POST",
-        body : newUser
+    addUser: builder.mutation({
+      query: (newUser) => ({
+        url: "/users",
+        method: "POST",
+        body: newUser,
       }),
       invalidatesTags: ["USERS"],
     }),
-    deleteUser : builder.mutation({
-      query : (userId) => ({
-        url : `/users/${userId}`,
-        method : "DELETE"
+    deleteUser: builder.mutation({
+      query: (userId) => ({
+        url: `/users/${userId}`,
+        method: "DELETE",
       }),
       invalidatesTags: ["USERS"],
     }),
 
     // Tikets
-    getTikets : builder.query({
-      query : () => '/tikets',
-      providesTags: ["TIKETS"]
+    getTikets: builder.query({
+      query: () => "/tikets",
+      providesTags: ["TIKETS"],
     }),
-    addTikets : builder.mutation({
-      query : (newTiket) => ({
-        url : "/tikets",
-        method : "POST",
-        body : newTiket
+    addTikets: builder.mutation({
+      query: (newTiket) => ({
+        url: "/tikets",
+        method: "POST",
+        body: newTiket,
+      }),
+      invalidatesTags: ["TIKETS"],
+    }),
+    deleteTiket : builder.mutation({
+      query : (tiketId) => ({
+        url : `/tikets/${tiketId}`,
+        method : "DELETE"
       }),
       invalidatesTags: ["TIKETS"],
     })
@@ -120,5 +127,6 @@ export const {
   useAddUserMutation,
   useDeleteUserMutation,
   useGetTiketsQuery,
-  useAddTiketsMutation
+  useAddTiketsMutation,
+  useDeleteTiketMutation
 } = apiSlice;

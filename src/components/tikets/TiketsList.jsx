@@ -41,7 +41,7 @@ function TiketsList() {
                             <Loading/>
                         ) : isSuccess ? (
                             tikets.map(tiket => (
-                                <Tiket {...tiket}/>
+                                <Tiket {...tiket} key={tiket.id}/>
                             ))
                         ) : null
                     }

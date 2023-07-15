@@ -1,7 +1,15 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
+import { useDeleteTiketMutation } from "../../api/apiSlice";
 
 function Tiket({id , image , name , subject , priority , status , date , exp}) {
+
+  const [deleteTiket] = useDeleteTiketMutation();
+
+  const deleteHandler = () => {
+    deleteTiket(id)
+  }
+
   return (
     <tr className="hover:bg-light">
       <td className="p-3">{id}</td>
@@ -27,7 +35,7 @@ function Tiket({id , image , name , subject , priority , status , date , exp}) {
       <td className="p-3">{date} </td>
       <td className="p-3">{exp}</td>
       <td className="p-3">
-        <button className="bg-light p-3">
+        <button className="bg-light p-3" onClick={deleteHandler}>
           <MdDelete />
         </button>
       </td>
