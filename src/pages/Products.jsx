@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 import AddProduct from "../components/products/AddProduct";
 
 function Products() {
+
   const [showAdd, setShowAdd] = useState(false);
 
   const showAddModal = () => {
@@ -28,7 +29,7 @@ function Products() {
       ) : products ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {products.map((product) => (
-            <Product {...product} key={product.id} />
+            <Product {...product} key={product.id}/>
           ))}
         </div>
       ) : null}

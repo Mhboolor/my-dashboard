@@ -1,5 +1,14 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": "xTMWfdv2Nlqv82vx4vTyD",
+      "title": "شلوار",
+      "price": "198000",
+      "stock": "56",
+      "rate": "80",
+      "image": "./images/products/product-1.png"
+    }
+  ],
   "tikets": [
     {
       "id": "#9852",

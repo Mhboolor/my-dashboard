@@ -9,6 +9,10 @@ export const apiSlice = createApi({
       query : () => "/products",
       providesTags : ["PRODUCTS"]
     }),
+    getProduct : builder.query({
+      query : (productId) => `/products/${productId}`,
+      providesTags : ["PRODUCTS"]
+    }),
     addProduct : builder.mutation({
       query : newProduct => ({
         url : "/products",
@@ -23,8 +27,16 @@ export const apiSlice = createApi({
         method : "DELETE"
       }),
       invalidatesTags : ["PRODUCTS"]
+    }),
+    editProduct : builder.mutation({
+      query : (editedProduct) => ({
+        url : `/products/${editedProduct.id}`,
+        method : "PUT",
+        body : editedProduct
+      }),
+      invalidatesTags : ["PRODUCTS"]
     })
   }),
 });
 
-export const { useGetAllProductsQuery , useAddProductMutation , useDeleteProductMutation} = apiSlice;
+export const { useGetAllProductsQuery , useGetProductQuery ,useAddProductMutation , useDeleteProductMutation , useEditProductMutation} = apiSlice;

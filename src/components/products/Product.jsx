@@ -1,6 +1,7 @@
 import React from 'react'
 import {MdEdit , MdClose , MdStar} from "react-icons/md"
 import { useDeleteProductMutation } from '../../api/apiSlice'
+import { Link } from 'react-router-dom';
 
 function Product({id , title , image , price , stock , rate}) {
 
@@ -11,9 +12,9 @@ function Product({id , title , image , price , stock , rate}) {
       <div className="bg-light flex items-center justify-center relative">
         <img src={image} alt="product_image" className="w-full h-full" />
         <div className="flex items-center justify-center text-white gap-1 overflow-hidden absolute -left-8 top-0 opacity-0 duration-200 ease-in-out group-hover:opacity-100 group-hover:left-0">
-          <button className="bg-green/100 p-1 rounded-sm">
+          <Link className="bg-green/100 p-1 rounded-sm" to={`./${id}`}>
             <MdEdit />
-          </button>
+          </Link>
           <button
             className="bg-red p-1 rounded-sm"
             onClick={() => deleteProduct(id)}
