@@ -49,12 +49,12 @@
     },
     {
       "id": "2",
-      "image": "./images/users/user-3.jpg",
-      "name": "سعید نجمی",
+      "image": "./images/users/user-4.jpg",
+      "name": "امیر دانشیار",
       "date": "عضو از 2017",
-      "property": "ETH",
-      "order": "3.16117008 ETH",
-      "currency": "1.70360009 ETH"
+      "property": "EUR",
+      "order": "25.08 EUR",
+      "currency": "12.58 EUR"
     },
     {
       "id": "3",

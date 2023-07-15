@@ -1,8 +1,12 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import BestUser from "./BestUser";
+import { useGetBestUsersQuery } from "../../api/apiSlice";
+import Loading from "../Loading"
 
 function BestUsers() {
+
+  const {data : users , isLoading , isSuccess , isError} = useGetBestUsersQuery();
 
 
   return (
@@ -27,6 +31,17 @@ function BestUsers() {
             </tr>
           </thead>
           <tbody>
+            {
+              isError ? (
+                <p>خطا در هنگام دریافت اطلاعات از سرور</p>
+              ) : isLoading ? (
+                <Loading/>
+              ) : isSuccess ? (
+                users.map(user => (
+                  <BestUser {...user}/>
+                ))
+              ) : null
+            }
           </tbody>
         </table>
       </div>
