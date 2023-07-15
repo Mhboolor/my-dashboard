@@ -21,34 +21,7 @@
       "du-date": "21/05/2017"
     }
   ],
-  "users": [
-    {
-      "id": "1",
-      "image": "./images/users/user-1.jpg",
-      "name": "پل جی فرند",
-      "phone": "937-330-1634",
-      "email": "pauljfrnd@jourrapide.com",
-      "company": "پل جی فرند",
-      "date": "07/07/2018",
-      "caption": "سلام من جاناتن دیو هستم ، از آن زمان به بعد ، متن ساختگی استاندارد صنعت بوده است دهه 1500 ، هنگامی که یک چاپگر ناشناخته از نوع خاصی استفاده کرد.",
-      "job": "مدیر شعبه",
-      "birthday": "March 23, 1984 (34 Years)",
-      "data": "April 22, 2016",
-      "update": "Dec 13, 2017"
-    },
-    {
-      "id": "66AfsjSO1JHHLLEMC_mfN",
-      "date": 1689398539009,
-      "name": "dsa",
-      "phone": "asd",
-      "email": "asd",
-      "company": "sd",
-      "caption": "asd",
-      "job": "sad",
-      "image": "sa",
-      "birthday": "asd"
-    }
-  ],
+  "users": [],
   "best-users": [
     {
       "id": "1",

@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
-  tagTypes: ["PRODUCTS", "BESTUSERS", "REVENUE-HISTORY","USERS"],
+  tagTypes: ["PRODUCTS", "BESTUSERS", "REVENUE-HISTORY","USERS","TIKETS"],
   endpoints: (builder) => ({
     // Products Api
     getAllProducts: builder.query({
@@ -80,6 +80,23 @@ export const apiSlice = createApi({
         body : newUser
       }),
       invalidatesTags: ["USERS"],
+    }),
+    deleteUser : builder.mutation({
+      query : (userId) => ({
+        url : `/users/${userId}`,
+        method : "DELETE"
+      }),
+      invalidatesTags: ["USERS"],
+    }),
+
+    // Tikets
+    addTikets : builder.mutation({
+      query : (newTiket) => ({
+        url : "/tikets",
+        method : "POST",
+        body : newTiket
+      }),
+      invalidatesTags: ["TIKETS"],
     })
   }),
 });
@@ -96,5 +113,6 @@ export const {
   useDeleteRevenueHistoryMutation,
   useGetAllUsersQuery,
   useGetUserQuery,
-  useAddUserMutation
+  useAddUserMutation,
+  useDeleteUserMutation
 } = apiSlice;

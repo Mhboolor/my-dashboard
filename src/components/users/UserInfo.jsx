@@ -14,7 +14,7 @@ function UserInfo({userId}) {
       <div className={`w-full h-full absolute z-10 top-0 left-0 backdrop-blur-sm bg-white/30 ${userId && 'hidden'}`}></div>
       {
         isError ? (
-          <p>خطا در هنگام دریافت اطلاعات از سرور</p>
+          <p>کاربری وجود ندارد</p>
         ) : isLoading ? (
           <Loading/>
         ) : isSuccess ? (

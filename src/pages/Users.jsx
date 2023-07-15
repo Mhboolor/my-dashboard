@@ -10,7 +10,6 @@ function Users() {
 
   const changeId = (id) => {
     setUserId(id);
-    console.log(userId);
   };
   const changeShow = () => {
     setShowAdd((prev) => !prev);
