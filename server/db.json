@@ -1,14 +1,5 @@
 {
-  "products": [
-    {
-      "id": "b45p8Uce3HcPu4lsTzNgT",
-      "title": "شلوار",
-      "price": "135000",
-      "stock": "68",
-      "rate": "57",
-      "image": "./images/products/product-1.png"
-    }
-  ],
+  "products": [],
   "tikets": [
     {
       "id": "#9852",

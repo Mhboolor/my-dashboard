@@ -1,7 +1,11 @@
 import React from 'react'
 import {MdEdit , MdClose , MdStar} from "react-icons/md"
+import { useDeleteProductMutation } from '../../api/apiSlice'
 
 function Product({id , title , image , price , stock , rate}) {
+
+  const [deleteProduct] = useDeleteProductMutation();
+
   return (
     <div className="bg-white rounded-sm p-6 group">
       <div className="bg-light flex items-center justify-center relative">
@@ -12,6 +16,7 @@ function Product({id , title , image , price , stock , rate}) {
           </button>
           <button
             className="bg-red p-1 rounded-sm"
+            onClick={() => deleteProduct(id)}
           >
             <MdClose />
           </button>
@@ -27,12 +32,12 @@ function Product({id , title , image , price , stock , rate}) {
             <MdStar />
           </div>
           <div className="bg-light text-gray-4 font-semibold p-2 rounded-sm">
-            {price} T
+            {Number(price)} T
           </div>
         </div>
         <div className="flex items-center gap-1 text-sm font-semibold text-gray-2">
           <span>موجودی : </span>
-          <span>{stock}</span>
+          <span>{Number(stock)}</span>
         </div>
       </div>
     </div>

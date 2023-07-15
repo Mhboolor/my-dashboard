@@ -16,8 +16,15 @@ export const apiSlice = createApi({
         body : newProduct
       }),
       invalidatesTags : ["PRODUCTS"]
+    }), 
+    deleteProduct : builder.mutation({
+      query : productId => ({
+        url : `/products/${productId}`,
+        method : "DELETE"
+      }),
+      invalidatesTags : ["PRODUCTS"]
     })
   }),
 });
 
-export const { useGetAllProductsQuery , useAddProductMutation } = apiSlice;
+export const { useGetAllProductsQuery , useAddProductMutation , useDeleteProductMutation} = apiSlice;
