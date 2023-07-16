@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBox() {
+function SearchBox({query ,searchTiket}) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 sm:items-center items-start sm:justify-between text-gray-4">
       <div className="flex items-center gap-2">
@@ -19,6 +19,8 @@ function SearchBox() {
           type="text"
           id="search"
           className="border text-gray-6 border-inp px-1 rounded-sm focus-visible:outline-none focus-visible:border-gray-4"
+          value={query}
+          onChange={e => searchTiket(e.target.value)}
         />
       </div>
     </div>

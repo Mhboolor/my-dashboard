@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBox({changeShow}) {
+function SearchBox({changeShow , searchUser , query}) {
   return (
     <div className="flex flex-col items-start sm:items-center sm:flex-row justify-between gap-4">
       <div className="relative">
@@ -8,6 +8,8 @@ function SearchBox({changeShow}) {
           type="text"
           placeholder="کاربر خود را جستجو کنید ..."
           className="border border-inp p-2 rounded-sm focus-visible:outline-none focus-visible:border-gray-4 group"
+          value={query}
+          onChange={e => searchUser(e.target.value)}
         />
       </div>
       <div>
