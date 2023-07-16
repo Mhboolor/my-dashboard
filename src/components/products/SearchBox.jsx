@@ -1,7 +1,7 @@
 import React from "react";
 import { MdAddCircle } from "react-icons/md";
 
-function SearchBox({ showAddModal}) {
+function SearchBox({ showAddModal , searchProduct , query}) {
   return (
     <div className="bg-white shadow-sm rounded-sm p-6 flex items-center flex-col md:flex-row justify-between gap-5">
       <div className="flex items-center flex-wrap gap-6">
@@ -10,6 +10,8 @@ function SearchBox({ showAddModal}) {
             type="text"
             placeholder="محصول خود را جستجو کنید ..."
             className="border border-inp p-2 rounded-sm focus-visible:outline-none focus-visible:border-gray-4"
+            value={query}
+            onChange={e => searchProduct(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-4">

@@ -4,12 +4,12 @@ import User from "./User";
 import { useGetAllUsersQuery } from "../../api/apiSlice";
 import Loading from "../Loading";
 
-function UsersList({ changeId , changeShow }) {
+function UsersList({ changeId, changeShow }) {
   const { data: users, isLoading, isError, isSuccess } = useGetAllUsersQuery();
 
   return (
     <div className="p-6 bg-white rounded-sm shadow-sm flex flex-col gap-5 flex-1 w-full">
-      <SearchBox changeShow={changeShow}/>
+      <SearchBox changeShow={changeShow} />
       <div className="w-full overflow-x-scroll md:overflow-auto">
         <table className="text-sm text-gray-4 text-justify w-[900px] md:w-full">
           <thead className="border-b">
@@ -28,8 +28,8 @@ function UsersList({ changeId , changeShow }) {
             ) : isLoading ? (
               <Loading />
             ) : isSuccess ? (
-              users.map(user => (
-                <User {...user} key={user.id} changeId={changeId}/>
+              users.map((user) => (
+                <User {...user} key={user.id} changeId={changeId} />
               ))
             ) : null}
           </tbody>

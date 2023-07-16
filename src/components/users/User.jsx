@@ -12,7 +12,7 @@ function User({id , image , name , phone , email , company , date , changeId}) {
 
 
   return (
-    <tr className="hover:bg-light" onClick={() => changeId(id)}>
+    <tr className="hover:bg-light cursor-pointer" onClick={() => changeId(id)}>
       <td className="flex items-center gap-2 px-3 py-5">
         <img
           src={image}
