@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Tikets from "./pages/Tikets";
 import Users from "./pages/Users";
 import Products from "./pages/Products";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [login, setLogin] = useState(

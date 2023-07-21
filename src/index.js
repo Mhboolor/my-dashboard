@@ -11,7 +11,6 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <StrictMode>
-        {/* <RouterProvider router={router}/> */}
         <App/>
       </StrictMode>
     </BrowserRouter>
