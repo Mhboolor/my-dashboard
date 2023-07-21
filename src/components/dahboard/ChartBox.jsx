@@ -67,10 +67,10 @@ function ChartBox() {
 
   return (
     <div className="flex flex-col items-start gap-6 lg:flex-row">
-      <div className=" p-6 bg-white shadow-sm flex flex-col rounded-sm h-full w-full lg:w-auto">
+      <div className=" p-6 bg-white dark:bg-[#36404a] shadow-sm flex flex-col rounded-sm h-full w-full lg:w-auto">
         <div className="flex items-center justify-between">
-          <p>مجموع درآمد</p>
-          <button>
+          <p className="dark:text-[#acbfd2]">مجموع درآمد</p>
+          <button className="dark:text-[#acbfd2]">
             <BsThreeDotsVertical />
           </button>
         </div>
@@ -84,37 +84,37 @@ function ChartBox() {
               paddingAngle={105}
             ></Pie>
           </PieChart>
-          <div className="absolute flex-col flex items-center justify-center gap-2 text-gray-2">
+          <div className="absolute flex-col flex items-center justify-center gap-2 text-gray-2 dark:text-[#8c98a5]">
             <p>درآمد</p>
             <p>68%</p>
           </div>
         </div>
         <div className="text-gray-2 flex flex-col items-center justify-center gap-3 my-3">
           <p className="font-semibold">تمام فروش امروز</p>
-          <p className="text-gray-5 font-semibold text-3xl">$178</p>
+          <p className="text-gray-5 font-semibold text-3xl dark:text-[#acbfd2]">$178</p>
           <p className="line-clamp-2 text-center">
             عناصر عنوان سنتی به گونه ای طراحی شده اند که در گوشت محتوای صفحه شما
             بهترین عملکرد را داشته باشند.
           </p>
           <div className="flex items-start justify-between w-full">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col dark:text-[#acbfd2] items-center justify-center">
               <p>ماه گذشته</p>
-              <p className="text-gray-5 font-semibold">$15k</p>
+              <p className="text-gray-5 font-semibold dark:text-[#acbfd2]">$15k</p>
             </div>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col dark:text-[#acbfd2] items-center justify-center">
               <p>هفته گذشته</p>
-              <p className="text-gray-5 font-semibold">$1.4k</p>
+              <p className="text-gray-5 font-semibold dark:text-[#acbfd2]">$1.4k</p>
             </div>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col dark:text-[#acbfd2] items-center justify-center">
               <p>هدف</p>
-              <p className="text-gray-5 font-semibold">$7.8k</p>
+              <p className="text-gray-5 font-semibold dark:text-[#acbfd2]">$7.8k</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between p-6 bg-white shadow-sm flex-col rounded-sm w-full h-full gap-5">
+      <div className="flex items-center justify-between p-6 bg-white dark:bg-[#36404a] shadow-sm flex-col rounded-sm w-full h-full gap-5">
         <div className="flex items-center justify-between w-full">
-          <p>تجزیه و تحلیل فروش</p>
+          <p className="dark:text-[#acbfd2]">تجزیه و تحلیل فروش</p>
           <div className="text-xs bg-light rounded-sm items-center hidden sm:flex">
             <button className="p-1 px-3 rounded-sm">امروز</button>
             <button className="p-1 px-3 rounded-sm">هفتگی</button>

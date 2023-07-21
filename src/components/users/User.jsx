@@ -12,7 +12,7 @@ function User({id , image , name , phone , email , company , date , changeId}) {
 
 
   return (
-    <tr className="hover:bg-light cursor-pointer" onClick={() => changeId(id)}>
+    <tr className="hover:bg-light cursor-pointer hover:dark:bg-[#3b4651]" onClick={() => changeId(id)}>
       <td className="flex items-center gap-2 px-3 py-5">
         <img
           src={image}
@@ -26,7 +26,7 @@ function User({id , image , name , phone , email , company , date , changeId}) {
       <td className="p-3">{company}</td>
       <td className="p-3">{date}</td>
       <td>
-        <button className="mx-1 text-base" onClick={deleteHandler}><MdDelete/></button>
+        <button className="mx-1 text-base dark:text-[#cedeef]" onClick={deleteHandler}><MdDelete/></button>
       </td>
     </tr>
   );

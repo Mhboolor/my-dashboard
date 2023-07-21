@@ -13,8 +13,8 @@ function RevenueHistory() {
   } = useGetRevenueHistoryQuery();
 
   return (
-    <div className="bg-white shadow-sm rounded-sm p-6 flex flex-col gap-5 flex-1 w-full h-full overflow-hidden">
-      <div className="flex items-center justify-between">
+    <div className="bg-white dark:bg-[#36404a] shadow-sm rounded-sm p-6 flex flex-col gap-5 flex-1 w-full h-full overflow-hidden">
+      <div className="flex items-center justify-between dark:text-[#acbfd2]">
         <p>سابقه درآمد</p>
         <button>
           <BsThreeDotsVertical />
@@ -22,7 +22,7 @@ function RevenueHistory() {
       </div>
       <div className="w-full overflow-x-scroll lg:overflow-auto">
         <table className="rounded-sm w-[640px] sm:w-full">
-          <thead className="bg-table-light text-sm text-gray-5 font-bold text-justify">
+          <thead className="bg-table-light dark:bg-[#3e4954] text-sm text-gray-5 dark:text-white font-bold text-justify">
             <tr>
               <th className="p-3">بازارها</th>
               <th className="p-3">تاریخ</th>

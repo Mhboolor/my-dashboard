@@ -16,6 +16,7 @@ function Products() {
   const [showAdd, setShowAdd] = useState(false);
   const [query, setQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [sorted, setSorted] = useState("all");
 
   const showAddModal = () => {
     setShowAdd((prev) => !prev);

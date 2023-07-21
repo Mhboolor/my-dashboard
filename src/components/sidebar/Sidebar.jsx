@@ -9,11 +9,11 @@ import { FaUsers } from "react-icons/fa6";
 
 function Sidebar() {
   return (
-    <div className="w-fuul h-full p-5 text-gray-3">
+    <div className="w-fuul h-full p-5 text-gray-3 dark:text-[#9097a7]">
       <p className="text-xs">فهرست</p>
       <ul className="flex flex-col text-base gap-2">
         <NavLink
-          to={"/"}
+          to={"/dashboard"}
           className={
             "w-full hover:text-[#00acc1] py-3 px-5 flex items-center gap-2 ease-in-out duration-200"
           }

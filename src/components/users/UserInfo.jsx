@@ -10,7 +10,7 @@ function UserInfo({userId}) {
   
 
   return (
-    <div className="bg-white shadow-sm rounded-sm p-6 flex flex-col gap-6 text-gray-2 text-sm flex-1 w-full xl:max-w-[520px] relative">
+    <div className="bg-white dark:bg-[#36404a] shadow-sm rounded-sm p-6 flex flex-col gap-6 text-gray-2 text-sm flex-1 w-full xl:max-w-[520px] relative">
       <div className={`w-full h-full absolute z-10 top-0 left-0 backdrop-blur-sm bg-white/30 ${userId && 'hidden'}`}></div>
       {
         isError ? (
@@ -28,7 +28,7 @@ function UserInfo({userId}) {
                 />
               </div>
               <div className="md:text-center flex flex-col gap-2">
-                <p className="text-gray-5 text-base font-semibold">{user.name}</p>
+                <p className="text-gray-5 text-base font-semibold dark:text-[#acbfd2]">{user.name}</p>
                 <p>{user.job}</p>
                 <p className="flex itmes-center gap-2 md:justify-center">
                   <MdOutlineHomeWork />
@@ -41,29 +41,29 @@ function UserInfo({userId}) {
                 </div>
               </div>
             </div>
-            <div className="flex items-center w-full bg-light gap-2 rounded-sm py-2 px-3 text-gray-5 text-base">
+            <div className="flex items-center w-full bg-light dark:bg-[rgb(66_78_90)] gap-2 rounded-sm py-2 px-3 text-gray-5 dark:text-[#acbfd2] text-base">
               <FaCircleUser />
               اطلاعات شخصی
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">درمورد من:</p>
-              <p className="text-gray-4">{user.caption}</p>
+              <p className="text-xs dark:text-[#8c98a5]">درمورد من:</p>
+              <p className="text-gray-4 dark:text-[#94a0ad]">{user.caption}</p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">تاریخ تولد :</p>
-              <p className="text-gray-4">{user.birthday}</p>
+              <p className="text-xs dark:text-[#8c98a5]">تاریخ تولد :</p>
+              <p className="text-gray-4 dark:text-[#94a0ad]">{user.birthday}</p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">شرکت:</p>
-              <p className="text-gray-4">{user.company}</p>
+              <p className="text-xs dark:text-[#8c98a5]">شرکت:</p>
+              <p className="text-gray-4 dark:text-[#94a0ad]">{user.company}</p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">اضافه :</p>
-              <p className="text-gray-4">{user.data}</p>
+              <p className="text-xs dark:text-[#8c98a5]">اضافه :</p>
+              <p className="text-gray-4 dark:text-[#94a0ad]">{user.data}</p>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-xs">به روز شده:</p>
-              <p className="text-gray-4">{user.update}</p>
+              <p className="text-xs dark:text-[#8c98a5]">به روز شده:</p>
+              <p className="text-gray-4 dark:text-[#94a0ad]">{user.update}</p>
             </div>
           </>
         ) : null

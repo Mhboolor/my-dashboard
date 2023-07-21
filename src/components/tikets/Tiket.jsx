@@ -11,7 +11,7 @@ function Tiket({id , image , name , subject , priority , status , date , exp}) {
   }
 
   return (
-    <tr className="hover:bg-light">
+    <tr className="hover:bg-light hover:dark:bg-[#3b4651] dark:text-[#94a0ad]">
       <td className="p-3">{id}</td>
       <td className="flex items-center gap-2 px-3 py-5">
         <img
@@ -35,7 +35,7 @@ function Tiket({id , image , name , subject , priority , status , date , exp}) {
       <td className="p-3">{date} </td>
       <td className="p-3">{exp}</td>
       <td className="p-3">
-        <button className="bg-light p-3" onClick={deleteHandler}>
+        <button className="bg-light p-3 dark:bg-[#424e5a] dark:text-white" onClick={deleteHandler}>
           <MdDelete />
         </button>
       </td>

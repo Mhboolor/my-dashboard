@@ -4,22 +4,22 @@
       "id": "xTMWfdv2Nlqv82vx4vTyD",
       "title": "شلوار",
       "price": "198000",
-      "stock": "56",
-      "rate": "80",
+      "stock": "10",
+      "rate": "50",
       "image": "./images/products/product-1.png"
     },
     {
       "id": "1",
       "title": "جوراب",
-      "price": "198000",
-      "stock": "56",
-      "rate": "80",
+      "price": "10000",
+      "stock": "20",
+      "rate": "70",
       "image": "./images/products/product-1.png"
     },
     {
       "id": "2",
       "title": "جین",
-      "price": "198000",
+      "price": "188000",
       "stock": "56",
       "rate": "80",
       "image": "./images/products/product-1.png"
@@ -79,40 +79,57 @@
   ],
   "users": [
     {
+      "id" : "wapynY4rA77yD1mZIum",
+      "date" : "7/18/2023" ,
+      "name" : "محمدحسین بولوری",
+      "phone" : "09035425892",
+      "email" : "mhstare81@gmail.com",
+      "company" : "bolori",
+      "caption" : "محمدحسین بولوری هستم فرانت اند دولوپر 20 سال سن ساکن تهران آماده همکاری",
+      "job" : "برنامه نویس فرانت اند",
+      "image" : "./images/users/user.jpg",
+      "birthday" :"1381/09/03",
+      "role" : "admin"
+    },
+    {
       "id": "E-wapynY4rA77yD1mZIum",
       "date": "7/15/2023",
-      "name": "زهرا بهزادیخواه",
-      "phone": "09032300793",
-      "email": "behzadikhahzahra@gmail.com",
+      "name": "زهرا زاهدی",
+      "phone": "09035421234",
+      "email": "jfghs@gmail.com",
       "company": "ویراد",
-      "caption": "سلام من زهرا بهزادیخواه هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
+      "caption": "سلام من زهرا زاهدی هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
       "job": "برنامه نویسی فرانت اند",
       "image": "./images/users/user-1.jpg",
-      "birthday": "29 شهریور 1379"
+      "birthday": "29 شهریور 1379",
+      "role" : "user"
+      
     },
     {
       "id": "E-4",
       "date": "7/15/2023",
-      "name": "علی بهزادیخواه",
-      "phone": "09032300793",
-      "email": "behzadikhahzahra@gmail.com",
+      "name": "علی محمد پور",
+      "phone": "09035427896",
+      "email": "sggds@gmail.com",
       "company": "ویراد",
-      "caption": "سلام من زهرا بهزادیخواه هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
+      "caption": "سلام من علی محمدپور هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
       "job": "برنامه نویسی فرانت اند",
       "image": "./images/users/user-1.jpg",
-      "birthday": "29 شهریور 1379"
+      "birthday": "29 شهریور 1379",
+      "role" : "user"
     },
     {
       "id": "E-2",
       "date": "7/15/2023",
-      "name": "محمد بهزادیخواه",
-      "phone": "09032300793",
-      "email": "behzadikhahzahra@gmail.com",
+      "name": "پرهام افشار",
+      "phone": "09035420258",
+      "email": "dgsga@gmail.com",
       "company": "ویراد",
-      "caption": "سلام من زهرا بهزادیخواه هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
+      "caption": "سلام من پرهام افشار هستم از مشهد و برنامه نویس فرانت اند هستم در شرکت ویر",
       "job": "برنامه نویسی فرانت اند",
       "image": "./images/users/user-1.jpg",
-      "birthday": "29 شهریور 1379"
+      "birthday": "29 شهریور 1379",
+      "role" : "user"
     }
   ],
   "best-users": [

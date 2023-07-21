@@ -10,9 +10,9 @@ function Revenue({ id, name, date, pay, status }) {
   };
 
   return (
-    <tr className="text-gray-2 text-sm ease-in-out duration-100 hover:bg-table-light">
+    <tr className="text-gray-2 dark:text-[#94a0ad] text-sm ease-in-out duration-100 hover:bg-table-light hover:dark:bg-[#3b4651]">
       <td className="p-3">
-        <p className="text-gray-5">{name}</p>
+        <p className="text-gray-5 dark:text-[#acbfd2]">{name}</p>
       </td>
       <td className="p-3">
         <p>{date}</p>
@@ -27,7 +27,7 @@ function Revenue({ id, name, date, pay, status }) {
       </td>
       <td className="p-3">
         <button
-          className="text-lg flex items-center justify-center text-black bg-light rounded-sm px-2 py-1"
+          className="text-lg flex items-center justify-center text-black bg-light rounded-sm px-2 py-1 dark:bg-[#424e5a] dark:text-white"
           onClick={deleteHandler}
         >
           <MdDelete />

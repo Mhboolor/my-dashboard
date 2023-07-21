@@ -7,7 +7,7 @@ function SearchBox({changeShow , searchUser , query}) {
         <input
           type="text"
           placeholder="کاربر خود را جستجو کنید ..."
-          className="border border-inp p-2 rounded-sm focus-visible:outline-none focus-visible:border-gray-4 group"
+          className="border border-inp p-2 rounded-sm focus-visible:outline-none focus-visible:border-gray-4 dark:bg-[#3b4651] dark:border-[#424e5a] dark:text-[#94a0ad]"
           value={query}
           onChange={e => searchUser(e.target.value)}
         />

@@ -11,7 +11,7 @@ function BestUser({id , image , name , date , property , order , currency}) {
   }
 
   return (
-    <tr className="text-gray-2 text-sm ease-in-out duration-100 hover:bg-table-light">
+    <tr className="text-gray-2 dark:text-[#94a0ad] text-sm ease-in-out duration-100 hover:bg-table-light hover:dark:bg-[#3b4651]">
       <td className="p-3">
         <img
           src={image}
@@ -22,7 +22,7 @@ function BestUser({id , image , name , date , property , order , currency}) {
         />
       </td>
       <td className="p-3">
-        <p className="text-gray-5">{name}</p>
+        <p className="text-gray-5 dark:text-[#acbfd2]">{name}</p>
         <p className="text-xs">{date}</p>
       </td>
       <td className="p-3">

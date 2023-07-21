@@ -23,15 +23,15 @@ function UsersList({ changeId, changeShow }) {
   }, []);
 
   return (
-    <div className="p-6 bg-white rounded-sm shadow-sm flex flex-col gap-5 flex-1 w-full">
+    <div className="p-6 bg-white rounded-sm shadow-sm flex flex-col gap-5 flex-1 w-full dark:bg-[#36404a]">
       <SearchBox
         changeShow={changeShow}
         query={query}
         searchUser={searchUser}
       />
       <div className="w-full overflow-x-scroll md:overflow-auto">
-        <table className="text-sm text-gray-4 text-justify w-[900px] md:w-full">
-          <thead className="border-b">
+        <table className="text-sm text-gray-4 text-justify w-[900px] md:w-full dark:text-[#94a0ad]">
+          <thead className="border-b dark:border-[#424e5a]">
             <tr>
               <th className="p-3">اطلاعات پایه</th>
               <th className="p-3">تلفن</th>
@@ -41,7 +41,7 @@ function UsersList({ changeId, changeShow }) {
               <th className="p-3">عمل</th>
             </tr>
           </thead>
-          <tbody className=" divide-y">
+          <tbody className="divide-y dark:divide-[#424e5a]">
             {isError ? (
               <p>خطا در هنگام دریافت اطلاعات از سرور</p>
             ) : isLoading ? (

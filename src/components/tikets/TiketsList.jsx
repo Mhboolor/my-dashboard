@@ -31,9 +31,9 @@ function TiketsList() {
   }, []);
 
   return (
-    <div className="bg-white shadow-sm rounded-sm p-6 flex flex-col gap-5">
+    <div className="bg-white dark:bg-[#36404a] shadow-sm rounded-sm p-6 flex flex-col gap-5">
       <div className="flex items-center justify-between">
-        <p className="text-xl text-gray-6">مدیریت تیکت ها</p>
+        <p className="text-xl text-gray-6 dark:text-[#acbfd2]">مدیریت تیکت ها</p>
         <button
           className="flex items-center rounded-md py-1 px-2 bg-[#4a81d4] text-white gap-2"
           onClick={changeShow}
@@ -45,7 +45,7 @@ function TiketsList() {
       <SearchBox searchTiket={searchTiket} query={query}/>
       <div className="w-full overflow-x-scroll md:overflow-auto">
         <table className="text-sm text-gray-4 text-justify w-[900px] md:w-full">
-          <thead className="border-b">
+          <thead className="border-b dark:border-[#424e5a] dark:text-[#94a0ad]">
             <tr>
               <th className="p-3">شناسه</th>
               <th className="p-3">ارسال شده توسط</th>
@@ -57,7 +57,7 @@ function TiketsList() {
               <th className="p-3">بازخورد</th>
             </tr>
           </thead>
-          <tbody className=" divide-y">
+          <tbody className=" divide-y dark:divide-[#424e5a]">
             {isError ? (
               <p>خطا در هنگام دریافت اطلاعات از سرور</p>
             ) : isLoading ? (
