@@ -5,7 +5,7 @@ import {MdArrowBackIos} from "react-icons/md"
 function BreadCrumb({address}) {
   return (
     <ul className='flex items-center gap-2 text-gray-2 text-sm'>
-        <Link to={'/'} className='text-gray-4 dark:text-white'>داشبورد</Link>
+        <Link to={'/dashboard'} className='text-gray-4 dark:text-white'>داشبورد</Link>
         <MdArrowBackIos/>
         <Link>{address}</Link>
     </ul>
