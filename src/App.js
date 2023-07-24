@@ -1,14 +1,14 @@
-import { Outlet, Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Tikets from "./pages/Tikets";
 import Users from "./pages/Users";
 import Products from "./pages/Products";
-import NotFound from "./pages/NotFound";
+import EditProduct from "./components/products/EditProduct";
 
 function App() {
   const [login, setLogin] = useState(
@@ -25,11 +25,11 @@ function App() {
 
   const loginHandler = () => {
     if (name === "bolori" && pass === "12345678") {
-        localStorage.setItem("login", true);
-        setLogin(localStorage.getItem("login"));
-        navigate("/dashboard");
-        setName("")
-        setPass("")
+      localStorage.setItem("login", true);
+      setLogin(localStorage.getItem("login"));
+      navigate("/dashboard");
+      setName("");
+      setPass("");
     }
   };
 
@@ -55,7 +55,8 @@ function App() {
         <main className="flex-1 w-full p-4">
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<Products />}/>
+            <Route path="/products/:productId" element={<EditProduct/>}/>
             <Route path="/users" element={<Users />} />
             <Route path="/tikets" element={<Tikets />} />
             <Route path="/profile" element={<Profile />} />
